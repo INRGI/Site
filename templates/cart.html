@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}   
+{% block content %}
+   
+  <table>
+    <tr>
+      <th><h2>Назва товару</h2></th>
+      <th><h2>Ціна</h2></th>
+      <th><h2></h2></th>
+    </tr>
+  {% for item in cart.items %}  
+    <tr>
+      <td><h3>{{ item.name }}</h3></td>
+      <td><h3>{{ item.price }}</h3></td>
+      <td><form action="/delete_from_cart" method="post">
+              <input type="hidden" name="item_id" value="{{ item.id }}">
+              <button type="submit">Видалити з корзини</button>
+      </form></td>
+    </tr>
+  {% endfor %}
+    <tr>
+      <td colspan="3"><h3>Загальна сума:</h3></td>
+      <td><h3>{{ cart.get_price() }}</h3></td>
+    </tr>
+  </table>
+
+{% endblock %}

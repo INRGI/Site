@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>NRGSHOP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+			
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						
+							<div id="logo">
+								<h1><a href="/">NRGSHOP</a></h1>
+								<span>by NRG</span>
+							</div>
+
+						
+							<nav id="nav">
+								<ul>
+									<li><a href="/">Головна</a></li>
+									<li><a href="/cart">Корзина</a></li>
+									<li><a href="/login">Увійти до системи</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+				
+				<div id="features-wrapper">
+                	<div class="container">
+                		<div class="row">
+							{% block content %}
+							{% endblock %}
+						</div>
+                	</div>
+              	</div>
+
+				
+			
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							
+							<div class="col-3 col-6-medium col-12-small">
+
+
+									<section class="widget contact last">
+										<h3>Звязок з нами</h3>
+										<ul>
+											<li><a href="https://www.facebook.com/profile.php?id=100004407588281" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://instagram.com/vain_hope?igshid=YmMyMTA2M2Y=" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="static/assets/js/jquery.dropotron.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>

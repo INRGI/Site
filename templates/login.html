@@ -1,0 +1,26 @@
+{% extends 'enrtry.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+		
+	<form method="POST">
+	    {% for field in form %}
+	    <p>{{field.label}}  {{field(class="new_text")}}</p>
+	    {% endfor %}
+	    <a href="/" class="button">Увійти</a>
+
+
+	</form>
+	<p>Ще не зареєстровані? <a href="{{ url_for('register') }}">Зареєструйтесь</a></p>
+
+
+
+</body>
+</html>
+{% endblock %}

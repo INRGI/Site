@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+							<div class="col-4 col-12-medium">								
+									<section class="box feature">
+										<a  class="image featured"><img src="{{ url_for('static', filename='img/' + item.image) }}"></a>
+										<div class="inner">
+											<header>
+												<h2>{{item.name}}</h2>
+												<p>{{item.description}}</p>
+												<p>Ціна товару:</p>
+												<p>{{item.price}}</p>
+												<form method="POST" action="/add_to_cart">
+													  <input type="hidden" name="item_id" value="{{ item.id }}">
+													  <button type="submit">Додати до корзини</button>
+												</form>
+
+											</header>
+										</div>
+									</section>
+							</div>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+
+{% extends 'layout.html' %}   
+{% block content %}
+              {% for item in category.items %}
+
+                  
+                    <div class="col-4 col-12-medium">               
+                        <section class="box feature">
+                          <a href="/item/{{item.id}}" class="image featured"><img src="{{ url_for('static', filename='img/' + item.image) }}" alt="" /></a>
+                          <div class="inner">
+                            <header>
+                              <h2>{{item.name}}</h2>
+
+                              <li><a href="/item/{{item.id}}">Переглянути цей товар</a></li>
+                            </header>
+                          </div>
+                        </section>
+                    </div>
+                  
+              {% endfor %}
+
+{% endblock %}
